@@ -11,13 +11,15 @@ function ProfileCard({ profile }) {
         </h2>
 
         <p className="text-gray-400 mt-1">
-          @{profile.handle}
+          @{profile.codeforces_handle}
         </p>
       </div>
 
       <div className="grid md:grid-cols-2 gap-6 mt-10">
+
         <div className="bg-slate-700 rounded-lg p-4">
           <p className="text-gray-400 text-sm">Current Rating</p>
+
           <h3 className="text-2xl font-bold text-blue-400 mt-2">
             {profile.currentRating}
           </h3>
@@ -25,6 +27,7 @@ function ProfileCard({ profile }) {
 
         <div className="bg-slate-700 rounded-lg p-4">
           <p className="text-gray-400 text-sm">Max Rating</p>
+
           <h3 className="text-2xl font-bold text-yellow-400 mt-2">
             {profile.maxRating}
           </h3>
@@ -32,27 +35,39 @@ function ProfileCard({ profile }) {
 
         <div className="bg-slate-700 rounded-lg p-4">
           <p className="text-gray-400 text-sm">Rank</p>
+
           <h3 className="text-xl font-bold text-white mt-2">
-            {profile.rank}
+            {profile.cf_rank || "Unrated"}
           </h3>
         </div>
 
         <div className="bg-slate-700 rounded-lg p-4">
-          <p className="text-gray-400 text-sm">Organization</p>
+          <p className="text-gray-400 text-sm">Max Rank</p>
+
           <h3 className="text-xl font-bold text-white mt-2">
-            {profile.organization}
+            {profile.cf_max_rank || "Unrated"}
           </h3>
         </div>
 
         <div className="bg-slate-700 rounded-lg p-4">
           <p className="text-gray-400 text-sm">Contribution</p>
+
           <h3 className="text-xl font-bold text-green-400 mt-2">
             {profile.contribution}
           </h3>
         </div>
 
         <div className="bg-slate-700 rounded-lg p-4">
+          <p className="text-gray-400 text-sm">Organization</p>
+
+          <h3 className="text-xl font-bold text-white mt-2">
+            {profile.organization || "Not Available"}
+          </h3>
+        </div>
+
+        <div className="bg-slate-700 rounded-lg p-4">
           <p className="text-gray-400 text-sm">Problems Solved</p>
+
           <h3 className="text-xl font-bold text-purple-400 mt-2">
             {profile.solved}
           </h3>
@@ -60,10 +75,12 @@ function ProfileCard({ profile }) {
 
         <div className="bg-slate-700 rounded-lg p-4 md:col-span-2">
           <p className="text-gray-400 text-sm">CP Score</p>
+
           <h3 className="text-3xl font-bold text-orange-400 mt-2">
             {profile.cpScore}/100
           </h3>
         </div>
+
       </div>
     </div>
   );

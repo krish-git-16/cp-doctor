@@ -16,18 +16,24 @@ function Profile() {
         setProfile({
           username: response.data.profile.username,
           email: response.data.profile.email,
-          handle: response.data.profile.codeforces_handle,
+          codeforces_handle: response.data.profile.codeforces_handle,
+
+          cf_rank: response.data.profile.cf_rank,
+          cf_max_rank: response.data.profile.cf_max_rank,
+          contribution: response.data.profile.contribution,
+          organization: response.data.profile.organization,
+
           currentRating: response.data.statistics.currentRating,
           maxRating: response.data.statistics.maxRating,
           solved: response.data.statistics.solvedProblems,
           contests: response.data.statistics.contestCount,
+
           cpScore: response.data.cpScore
         });
 
         setLoading(false);
       } catch (error) {
         console.log(error);
-
         setLoading(false);
       }
     }
