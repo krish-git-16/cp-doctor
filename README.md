@@ -87,8 +87,10 @@ cd cp-doctor
 ```
 ⚙️ Local Setup
 1. Clone the Repository
+
 git clone https://github.com/krish-git-16/cp-doctor.git
 cd cp-doctor
+
 2. Backend Setup
 
 Navigate to the backend directory:
@@ -111,6 +113,7 @@ npm start
 The backend runs locally on:
 
 http://localhost:5000
+
 3. Frontend Setup
 
 Open another terminal and navigate to the frontend directory:
