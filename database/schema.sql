@@ -8,6 +8,10 @@ CREATE TABLE users (
     email VARCHAR(100) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
     codeforces_handle VARCHAR(100),
+    cf_rank VARCHAR(50),
+    cf_max_rank VARCHAR(50),
+    contribution INT DEFAULT 0,
+    organization VARCHAR(255),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
